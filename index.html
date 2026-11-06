@@ -6,7 +6,7 @@
 <script>
 (()=>{const $=id=>document.getElementById(id),field=$('field'),target=$('target'),overlay=$('overlay'),joke=$('joke');let active=false,score=0,hits=0,combo=0,time=15,last=0,prev=0,frame=0;
 const jokes=['БАБУИН ОДОБРЯЕТ!','У МЕНЯ ЛАПКИ!','НЕ ДОГОНИШЬ!','КАЙФ ПОЙМАН!','БАБУИН НЕ БАГ, А ФИЧА!','Я ВООБЩЕ-ТО НА ОБЕДЕ!','ДЕДЛАЙН? КАКОЙ ДЕДЛАЙН?','БАБУИН ВЫШЕЛ ИЗ ЧАТА!'];
-const photos=['https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=900','https://images.unsplash.com/photo-1504457047772-27faf1c00561?w=900','https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=900'];
+const photos=['https://commons.wikimedia.org/wiki/Special:Redirect/file/Hamadryas_baboon.jpg?width=960','https://commons.wikimedia.org/wiki/Special:Redirect/file/Portrait_Of_A_Baboon.jpg?width=960','https://commons.wikimedia.org/wiki/Special:Redirect/file/Hamadryas_Baboon_1.jpg?width=960','https://commons.wikimedia.org/wiki/Special:Redirect/file/1_Hamadryas_baboon.jpg?width=960'];
 function bg(){const img=$('background');img.src=photos[hits%photos.length];img.onerror=()=>img.style.opacity='0';img.onload=()=>img.style.opacity='1'}
 function move(){target.style.left=Math.round(8+Math.random()*Math.max(0,field.clientWidth-96))+'px';target.style.top=Math.round(85+Math.random()*Math.max(0,field.clientHeight-180))+'px'}
 function render(){$('score').textContent=score;$('time').textContent=time.toFixed(1);$('combo').textContent=Math.max(1,combo)}
